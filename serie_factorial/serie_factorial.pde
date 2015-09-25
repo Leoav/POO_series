@@ -17,3 +17,13 @@ void setup(){
   for (int b=0;b<=x;b++) // se usa un ciclo para representar los n primeros numeros de la serie de los factoriales 
   print (fact(b), " ");   
 }
+void draw(){ //A continuación, se usa la funcion draw para realizar de manera 'ciclica' la representación grafica de dicha serie
+  int w=800;
+  int h=800;
+  int x=12;  
+  for (int i=x;i>=0;i--){
+    fill(fact(i)%255,fact(i+9)%255,fact(i+50)%255);
+    ellipse(w/2,h/2,fact(i),fact(i));
+    // Asi pues, la serie esta representada de manera grafica en el tamaño de que pueda tener la elipse y su color
+  }
+}
